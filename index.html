@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Npm by nokxevil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Npm</h1>
+      <h2 class="project-tagline">a package manager for javascript</h2>
+      <a href="https://github.com/nokxevil/npm" class="btn">View on GitHub</a>
+      <a href="https://github.com/nokxevil/npm/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nokxevil/npm/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="npm1----a-javascript-package-manager" class="anchor" href="#npm1----a-javascript-package-manager" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>npm(1) -- a JavaScript package manager</h1>
+
+<p><a href="https://travis-ci.org/npm/npm"><img src="https://img.shields.io/travis/npm/npm/master.svg" alt="Build Status"></a></p>
+
+<h2>
+<a id="synopsis" class="anchor" href="#synopsis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SYNOPSIS</h2>
+
+<p>This is just enough info to get you up and running.</p>
+
+<p>Much more info available via <code>npm help</code> once it's installed.</p>
+
+<h2>
+<a id="important" class="anchor" href="#important" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>IMPORTANT</h2>
+
+<p><strong>You need node v0.8 or higher to run this program.</strong></p>
+
+<p>To install an old <strong>and unsupported</strong> version of npm that works on node 0.3
+and prior, clone the git repo and dig through the old tags and branches.</p>
+
+<p><strong>npm is configured to use npm, Inc.'s public package registry at
+<a href="https://registry.npmjs.org">https://registry.npmjs.org</a> by default.</strong></p>
+
+<p>You can configure npm to use any compatible registry you
+like, and even run your own registry. Check out the <a href="https://docs.npmjs.com/misc/registry">doc on
+registries</a>.</p>
+
+<p>Use of someone else's registry may be governed by terms of use. The
+terms of use for the default public registry are available at
+<a href="https://www.npmjs.com">https://www.npmjs.com</a>.</p>
+
+<h2>
+<a id="super-easy-install" class="anchor" href="#super-easy-install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Super Easy Install</h2>
+
+<p>npm is bundled with <a href="http://nodejs.org/download/">node</a>.</p>
+
+<h3>
+<a id="windows-computers" class="anchor" href="#windows-computers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows Computers</h3>
+
+<p><a href="http://nodejs.org/download/">Get the MSI</a>.  npm is in it.</p>
+
+<h3>
+<a id="apple-macintosh-computers" class="anchor" href="#apple-macintosh-computers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Apple Macintosh Computers</h3>
+
+<p><a href="http://nodejs.org/download/">Get the pkg</a>.  npm is in it.</p>
+
+<h3>
+<a id="other-sorts-of-unices" class="anchor" href="#other-sorts-of-unices" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other Sorts of Unices</h3>
+
+<p>Run <code>make install</code>.  npm will be installed with node.</p>
+
+<p>If you want a more fancy pants install (a different version, customized
+paths, etc.) then read on.</p>
+
+<h2>
+<a id="fancy-install-unix" class="anchor" href="#fancy-install-unix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fancy Install (Unix)</h2>
+
+<p>There's a pretty robust install script at
+<a href="https://www.npmjs.com/install.sh">https://www.npmjs.com/install.sh</a>.  You can download that and run it.</p>
+
+<p>Here's an example using curl:</p>
+
+<div class="highlight highlight-source-shell"><pre>curl -L https://www.npmjs.com/install.sh <span class="pl-k">|</span> sh</pre></div>
+
+<h3>
+<a id="slightly-fancier" class="anchor" href="#slightly-fancier" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Slightly Fancier</h3>
+
+<p>You can set any npm configuration params with that script:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm_config_prefix=/some/path sh install.sh</pre></div>
+
+<p>Or, you can run it in uber-debuggery mode:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm_debug=1 sh install.sh</pre></div>
+
+<h3>
+<a id="even-fancier" class="anchor" href="#even-fancier" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Even Fancier</h3>
+
+<p>Get the code with git.  Use <code>make</code> to build the docs and do other stuff.
+If you plan on hacking on npm, <code>make link</code> is your friend.</p>
+
+<p>If you've got the npm source code, you can also semi-permanently set
+arbitrary config keys using the <code>./configure --key=val ...</code>, and then
+run npm commands by doing <code>node cli.js &lt;cmd&gt; &lt;args&gt;</code>.  (This is helpful
+for testing, or running stuff without actually installing npm itself.)</p>
+
+<h2>
+<a id="windows-install-or-upgrade" class="anchor" href="#windows-install-or-upgrade" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows Install or Upgrade</h2>
+
+<p>You can download a zip file from <a href="https://github.com/npm/npm/releases">https://github.com/npm/npm/releases</a>, and
+unpack it in the <code>node_modules\npm\</code> folder inside node's installation folder.</p>
+
+<p>To upgrade to npm 2, follow the Windows upgrade instructions in
+the npm Troubleshooting Guide:</p>
+
+<p><a href="https://github.com/npm/npm/wiki/Troubleshooting#upgrading-on-windows">https://github.com/npm/npm/wiki/Troubleshooting#upgrading-on-windows</a></p>
+
+<p>If that's not fancy enough for you, then you can fetch the code with
+git, and mess with it directly.</p>
+
+<h2>
+<a id="installing-on-cygwin" class="anchor" href="#installing-on-cygwin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing on Cygwin</h2>
+
+<p>No.</p>
+
+<h2>
+<a id="uninstalling" class="anchor" href="#uninstalling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Uninstalling</h2>
+
+<p>So sad to see you go.</p>
+
+<div class="highlight highlight-source-shell"><pre>sudo npm uninstall npm -g</pre></div>
+
+<p>Or, if that fails,</p>
+
+<div class="highlight highlight-source-shell"><pre>sudo make uninstall</pre></div>
+
+<h2>
+<a id="more-severe-uninstalling" class="anchor" href="#more-severe-uninstalling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More Severe Uninstalling</h2>
+
+<p>Usually, the above instructions are sufficient.  That will remove
+npm, but leave behind anything you've installed.</p>
+
+<p>If you would like to remove all the packages that you have installed,
+then you can use the <code>npm ls</code> command to find them, and then <code>npm rm</code> to
+remove them.</p>
+
+<p>To remove cruft left behind by npm 0.x, you can use the included
+<code>clean-old.sh</code> script file.  You can run it conveniently like this:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm explore npm -g -- sh scripts/clean-old.sh</pre></div>
+
+<p>npm uses two configuration files, one for per-user configs, and another
+for global (every-user) configs.  You can view them by doing:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm config get userconfig   <span class="pl-c"># defaults to ~/.npmrc</span>
+npm config get globalconfig <span class="pl-c"># defaults to /usr/local/etc/npmrc</span></pre></div>
+
+<p>Uninstalling npm does not remove configuration files by default.  You
+must remove them yourself manually if you want them gone.  Note that
+this means that future npm installs will not remember the settings that
+you have chosen.</p>
+
+<h2>
+<a id="more-docs" class="anchor" href="#more-docs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More Docs</h2>
+
+<p>Check out the <a href="https://docs.npmjs.com/">docs</a>,
+especially the <a href="https://docs.npmjs.com/misc/faq">faq</a>.</p>
+
+<p>You can use the <code>npm help</code> command to read any of them.</p>
+
+<p>If you're a developer, and you want to use npm to publish your program,
+you should <a href="https://docs.npmjs.com/misc/developers">read this</a></p>
+
+<h2>
+<a id="bugs" class="anchor" href="#bugs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BUGS</h2>
+
+<p>When you find issues, please report them:</p>
+
+<ul>
+<li>web:
+<a href="https://github.com/npm/npm/issues">https://github.com/npm/npm/issues</a>
+</li>
+</ul>
+
+<p>Be sure to include <em>all</em> of the output from the npm command that didn't work
+as expected.  The <code>npm-debug.log</code> file is also helpful to provide.</p>
+
+<p>You can also look for isaacs in #node.js on irc://irc.freenode.net.  He
+will no doubt tell you to put the output in a gist or email.</p>
+
+<h2>
+<a id="see-also" class="anchor" href="#see-also" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SEE ALSO</h2>
+
+<ul>
+<li>npm(1)</li>
+<li>npm-faq(7)</li>
+<li>npm-help(1)</li>
+<li>npm-index(7)</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nokxevil/npm">Npm</a> is maintained by <a href="https://github.com/nokxevil">nokxevil</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
